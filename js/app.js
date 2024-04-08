@@ -3,7 +3,8 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      emails: []
+      emails: [],
+      nEmails:10
     }
   },
   methods: {
@@ -19,7 +20,7 @@ createApp({
     },
   },
   created() {
-    this.newEmail(10)
+    this.newEmail(this.nEmails)
   }
 
 }).mount('#app')
